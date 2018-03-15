@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Bloc Notes</title>
+    <link rel="stylesheet" href="lib/jqm/jquery.mobile.css" />
+    <link rel="stylesheet" href="lib/jquery/jquery-ui.css" />
+      
+    <style>
+        header {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div data-role="page" id="page1">
+
+        <header class="ui-toolbar-header" data-role="header" data-theme="b">
+            <p class="ui-toolbar-title">Bloc Notes</p>
+
+            <div class="ui-navbar" data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#" data-role="button" id="btCreer">Nouveau</a>
+                    </li>
+                    <li>
+                        <a href="#" data-role="button" id="btOuvrir">Ouvrir</a>
+                    </li>
+                    <li>
+                        <a href="#" data-role="button" id="btAjouter">Enregistrer</a>
+                    </li>
+                    <li>
+                        <a href="#" data-role="button" id="btSupprimer">Supprimer</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- /header -->
+
+
+        <div data-role="content" id="liste" class="hide">
+            <label for="selection">Choisissez un fichier :</label>
+            <select id="selection">
+
+            </select>
+            <button data-role="button" id="btConfOuvrir">OK</button>
+        </div>
+
+        <div data-role="content" id="note">
+            <label for="nameFile">Nom du fichier</label>
+            <input type="text" id="nameFile" />
+
+            <textarea id="contentFile" placeholder="Votre note" rows="6"></textarea>
+
+        </div>
+
+        <div data-role="content" id="comment"></div>
+
+        <!-- footer -->
+        <footer class="ui-toolbar-footer" data-role="footer" data-theme="b" data-position="fixed">
+            <p class="ui-toolbar-title">GitHub : GeorgiaLR</p>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="lib/jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="lib/jqm/jquery.mobile.js"></script>
+    <script type="text/javascript" src="js/blocnotes.js"></script>
+    
+</body>
+
+</html>
